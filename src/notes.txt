@@ -1,1 +1,18 @@
 stopped on lecture 228 (start with 229)
+
+from lecture 230
+install the lodash dependency, then
+You can then import flowRight into your file like so:
+
+import { flowRight } from 'lodash';
+and just replace any place in the lesson where we use compose with flowRight:
+
+export default compose(
+  //...code 
+)(CollectionItemContainer);
+becomes
+
+export default flowRight(
+  // ...code
+)(CollectionItemContainer);
+You can find out more about this breaking change here as well: https://github.com/apollographql/react-apollo/issues/3330. So push forward with the lesson :)
